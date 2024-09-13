@@ -1,0 +1,215 @@
+{
+    "env": {
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "plugins": [
+        "import",
+        "security",
+        "@typescript-eslint",
+        "unused-imports"
+    ],
+    "rules": {
+        "import/named": 0,
+        "security/detect-non-literal-fs-filename": 0,
+        "import/prefer-default-export": 0,
+        "import/no-commonjs": 1,
+        "no-underscore-dangle": 0,
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "object-property-newline": [
+            "error",
+            {
+                "allowAllPropertiesOnSameLine": true
+            }
+        ],
+        "no-multi-spaces": "error",
+        "no-trailing-spaces": "error",
+        "function-call-argument-newline": [
+            "error",
+            "consistent"
+        ],
+        "prefer-destructuring": [
+            "error",
+            {
+                "object": true,
+                "array": false
+            }
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": {
+                    "multiline": true,
+                    "minProperties": 2
+                },
+                "ObjectPattern": {
+                    "multiline": true,
+                    "minProperties": 2
+                },
+                "ImportDeclaration": {
+                    "multiline": true,
+                    "minProperties": 2
+                },
+                "ExportDeclaration": {
+                    "multiline": true,
+                    "minProperties": 1
+                }
+            }
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        // "camelcase": "error",
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "newline-per-chained-call": [
+            "error",
+            {
+                "ignoreChainWithDepth": 1
+            }
+        ],
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 250
+            }
+        ],
+        "no-var": "error",
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "no-console": "off",
+        "consistent-return": "off",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "brace-style": [
+            "error",
+            "1tbs"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": "error",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "no-continue": [
+            "off"
+        ],
+        "no-restricted-syntax": [
+            "off"
+        ],
+        "one-var": [
+            "off"
+        ],
+        "import/no-unresolved": [
+            2,
+            {
+                "commonjs": true,
+                "amd": true,
+                "caseSensitive": true
+            }
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxEOF": 1
+            }
+        ],
+        "no-lone-blocks": 0,
+        "import/namespace": 2,
+        "import/default": 2,
+        "import/export": 2,
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "index",
+                    "sibling",
+                    "parent"
+                ],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-var-requires": 0,
+        "no-async-promise-executor": "off",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1,
+                "ignoredNodes": [
+                    "PropertyDefinition[decorators]",
+                    "TSUnionType",
+                    "ConditionalExpression",
+                    "SwitchCase"
+                ]
+            }
+        ]
+    },
+    "settings": {
+        "import/parser": {
+            "typescript-eslint-parser": [
+                ".ts"
+            ]
+        },
+        "import/resolver": {
+            // "eslint-import-resolver-typescript": true,
+            "node": {
+                "paths": [
+                    "src"
+                ],
+                "extensions": [
+                    ".js",
+                    ".ts",
+                    ".d.ts"
+                ]
+            }
+        }
+    }
+}

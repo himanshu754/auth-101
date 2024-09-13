@@ -1,0 +1,6 @@
+/dist
+/jest.config.js
+/lint-staged.config.js
+/src/types
+/src/db/migrations
+/output
